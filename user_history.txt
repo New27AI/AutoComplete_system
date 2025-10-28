@@ -1,0 +1,32 @@
+[USER_WORDS]
+zebra 10
+manabozho 20
+mam 10
+oad 10
+horse 10
+apple 20
+app 10
+h 40
+sta 20
+[SEARCH_HISTORY]
+zeb 1
+manabozho 20
+man 1
+sta 23
+h 40
+app 11
+zebra 10
+manabozh 1
+ap 1
+apple 20
+horse 11
+oad 11
+oado 1
+ma 1
+ze 1
+st 2
+sta= 1
+mam 11
+ho 1
+zebr 1
+hor 1

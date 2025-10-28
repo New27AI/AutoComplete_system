@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Autocomplete System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="header__title">Smart Autocomplete System</h1>
+      <p class="header__description">
+        Real-time word suggestions powered by C++ Trie data structure
+      </p>
+      <div class="status-indicator" id="apiStatus">
+        <span class="status-indicator__dot"></span>
+        <span class="status-indicator__text">Connecting to API...</span>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="search-section">
+        <div class="search-container">
+          <div class="search-input-wrapper">
+            <input
+              type="text"
+              id="searchInput"
+              class="search-input"
+              placeholder="Start typing..."
+              autocomplete="off"
+            />
+            <button id="clearBtn" class="search-clear" title="Clear search">×</button>
+            <div id="loadingIndicator" class="loading-indicator">
+              <div class="spinner"></div>
+            </div>
+
+            <!-- Suggestions dropdown -->
+            <div id="suggestionsDropdown" class="suggestions-dropdown">
+              <div id="suggestionsList" class="suggestions-list"></div>
+              <div id="noSuggestions" class="no-suggestions">No suggestions found</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="sidebar">
+        <div class="stats-panel">
+          <h3 class="stats-panel__title">Performance Stats</h3>
+          <div class="stats-grid">
+            <div class="stat-item">
+              <span class="stat-item__label">Response Time</span>
+              <span class="stat-item__value" id="responseTime">0ms</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-item__label">Suggestions</span>
+              <span class="stat-item__value" id="suggestionCount">0</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-item__label">Total Queries</span>
+              <span class="stat-item__value" id="totalQueries">0</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-item__label">Avg Response</span>
+              <span class="stat-item__value" id="avgResponseTime">0ms</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="history-panel">
+          <div class="history-header">
+            <h3 class="history-panel__title">Recent Searches</h3>
+            <button id="clearHistory" class="clear-history-btn">Clear</button>
+          </div>
+          <div id="historyList" class="history-list">
+            <div class="history-empty">No searches yet</div>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="footer">
+      <div class="tech-stack">
+        <span class="tech-item">C++ Backend</span>
+        <span class="tech-divider">•</span>
+        <span class="tech-item">Trie Data Structure</span>
+        <span class="tech-divider">•</span>
+        <span class="tech-item">Crow Framework</span>
+        <span class="tech-divider">•</span>
+        <span class="tech-item">REST API</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
